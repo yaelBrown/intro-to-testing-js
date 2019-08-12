@@ -69,3 +69,23 @@ function concat(a,b) {
 
     return (tempA + tempB);
 };
+
+// isVowel function
+function isVowel(a) {
+    if (!isNaN(a)) {
+      return false;
+    } else if (typeof a === "boolean") {
+      return false;
+    } else if (a == null) {
+      return false;
+    } else {
+    return ['a', 'e', 'i', 'o', 'u'].indexOf(a.toLowerCase()) !== -1;
+    }
+}
+
+// add function
+function add(a,b) {
+    return parseInt(a)+parseInt(b);
+}
+
+// isEven

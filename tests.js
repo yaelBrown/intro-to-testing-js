@@ -157,3 +157,65 @@ describe('concat', function() {
     expect(concat(12, 27)).toEqual("1227");
   });
 })
+
+// isVowel
+describe('isVowel', function() {
+  it('Should be a defined function', function() {
+    expect(typeof isVowel).toBe('function');
+  });
+  it('Should return a boolean', function() {
+    expect(typeof isVowel()).toBe('boolean');
+  });
+  it('isVowel("a") should return true', function() {
+    expect(isVowel("a")).toEqual(true);
+  })
+  it('isVowel("A") should return true', function() {
+    expect(isVowel("A")).toEqual(true);
+  })
+  it('isVowel("y") should return false', function() {
+    expect(isVowel("y")).toEqual(false);
+  })
+  it('isVowel(4) should return false', function() {
+    expect(isVowel(4)).toEqual(false);
+  })
+  it('isVowel(true) or isVowel(false) should return false', function() {
+    expect(isVowel(true)).toEqual(false);
+  })
+  it('isVowel("banana") should return false', function() {
+    expect(isVowel("banana")).toEqual(false);
+  })
+  it('isVowel() should return false', function() {
+    expect(isVowel()).toEqual(false);
+  })
+})
+
+// add
+describe('add', function() {
+  it('Should be a defined function', function() {
+    expect(typeof add).toBe('function');
+  });
+  it('Should return a number', function() {
+    expect(typeof add()).toBe('number');
+  });
+  it('add(2,3) returns 5', function() {
+    expect(add(2,3)).toBe(5);
+  });
+  it('add(-3, -9) returns -12', function() {
+    expect(add(-3,-9)).toEqual(-12);
+  });
+  it('add("5", 6) returns 11', function() {
+    expect(add("5",6)).toEqual(11);
+  });
+  it('add("-4", "10") returns 6', function() {
+    expect(add("-4", "10")).toBe(6);
+  });
+  it('add("banana", "split") returns NaN', function() {
+    expect(add("banana", "split")).toEqual(NaN);
+  });
+  it('add(2, "apples") returns NaN', function() {
+    expect(add(2, "apples")).toEqual(NaN);
+  });
+  it('add() returns NaN', function() {
+    expect(add()).toEqual(NaN);
+  });
+});
