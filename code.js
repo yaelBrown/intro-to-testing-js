@@ -5,17 +5,18 @@ function helloWorld() {
 
 // sum function
 function sum(a, b) {
-    return a+b;
+    let ans = (parseInt(a) + parseInt(b));
+    return (isNaN(ans)) ? 0 : ans;
 }
 
 // isTrue function
 function isTrue(bool) {
-    return (bool == true);
+    return (bool === true);
 }
 
 // isFalse function
-function isTrue(bool) {
-    return (bool == true);
+function isFalse(bool) {
+    return (bool === false);
 }
 
 // notBool function
@@ -55,5 +56,16 @@ function and(a,b) {
 
 // concat function
 function concat(a,b) {
-    return (a+b);
-}
+    let tempA = a;
+    let tempB = b;
+  
+    if (!isNaN(a)) {
+      tempA = tempA.toString();
+    }
+  
+    if (!isNaN(b)) {
+      tempB = tempB.toString();
+    }
+
+    return (tempA + tempB);
+};
